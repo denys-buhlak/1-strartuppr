@@ -1,0 +1,136 @@
+.footer {
+  padding-top: 3.5%;
+  overflow: hidden;
+
+  text-align: center;
+  color: #e4e4e4;
+
+  background-color: #383838;
+  // .footer__logo
+  &__logo {
+    margin: 0 auto 4.5%;
+  }
+  // .footer__logo-link
+  &__logo-link {
+    text-decoration: none;
+  }
+  // .footer__social
+  &__socials {
+    margin: 0 auto 6.25%;
+  }
+  // .footer__map
+  &__map {
+    // width: 100%;
+    height: 66.5vh;
+    margin: 0 -15px;
+
+    @include mq($bp-tablet) {
+      margin-right: calc(-50vw + 384px);
+      margin-left: calc(-50vw + 384px);
+    }
+
+    @include mq($bp-desktop) {
+      margin-right: calc(-50vw + 600px);
+      margin-left: calc(-50vw + 600px);
+    }
+
+    & iframe {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      border: 0;
+    }
+  }
+  // .footer__text
+  &__text {
+    position: relative;
+
+    padding: 3.5em 0 2em;
+
+    font-weight: 800;
+
+    font-size: 15px;
+    text-transform: capitalize;
+
+    &::before {
+      content: '\42';
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      z-index: 1;
+
+      font-size: 20px;
+      font-family: $font-family-icons;
+      text-align: center;
+      color: #e4e4e4;
+
+      border-radius: 3px;
+
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      z-index: 0;
+
+      width: 40px;
+      height: 40px;
+
+      background-color: #00a99d;
+      border-radius: 5px;
+
+      transform: translateX(-50%) rotate(45deg);
+    }
+  }
+}
+
+.social {
+  font-size: 0;
+  // .social__item
+  &__item {
+    display: inline-flex;
+  }
+  // .social__link
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+
+    font-size: 0;
+    color: #e4e4e4;
+
+    // background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+
+    transition: background-color 1s, border-color 0.5s, transform 1s;
+
+    &:hover {
+      background-color: #00a99d;
+      border-color: #00a99d;
+      transform: scale(1.5);
+    }
+
+    &::before {
+      content: '\e099';
+
+      display: inline-block;
+
+      font-size: 16px;
+      font-family: $font-family-icons;
+    }
+  }
+}
+/* GOOGLE MAP */
+// need API-KEY???
+.gm-inset {
+  display: none;
+}

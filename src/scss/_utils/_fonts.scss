@@ -1,0 +1,17 @@
+// <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
+//<style>@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap');</style>
+// font-family: 'Raleway', sans-serif;
+
+// RALEWAY
+
+/* RALEWAY Regular (400) normal */
+@include font-face('raleway', '../../fonts/Raleway/Raleway-Regular', 400, normal, woff woff2);
+/* RALEWAY Medium (500) normal */
+@include font-face('raleway', '../../fonts/Raleway/Raleway-Medium', 500, normal, woff woff2);
+/* RALEWAY ExtraBold (800) normal  */
+@include font-face('raleway', '../../fonts/Raleway/Raleway-ExtraBold', 800, normal, woff woff2);
+
+// ElegantIcons
+
+/* ELEGANTICONS Regular (400) normal */
+@include font-face('ElegantIcons', '../../fonts/ElegantIcons/ElegantIcons', normal, normal, eot svg woff woff2);

@@ -1,0 +1,142 @@
+/* _features.scss */
+.features {
+  &__body {
+    margin-bottom: -32px;
+
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      margin-bottom: -48px;
+    }
+  }
+
+  &__features {
+    max-width: 360px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    @media (min-width: $bp-desktop) {
+      margin: 0;
+    }
+  }
+
+  &__mockups {
+    position: relative;
+
+    display: flex;
+    margin-left: auto;
+    padding-top: 14px;
+  }
+}
+
+.feature {
+  position: relative;
+
+  margin-bottom: 60px;
+  padding-left: 90px;
+
+  font-size: 14px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: -8px 16px;
+
+    font-size: 40px;
+
+    font-family: $font-family-icons;
+    color: #00a99d;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: 800;
+    font-size: 14px;
+    color: #e4e4e4;
+
+    text-transform: uppercase;
+  }
+
+  &__text {
+    line-height: 1.7;
+    font-weight: 500;
+    font-size: 14px;
+
+    color: #7a7a7a;
+  }
+}
+
+.mockup {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &_horizontal {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    z-index: 2;
+
+    width: 250px;
+    height: 125px;
+    padding: 12px 24px 0;
+
+    background-image: url('../../images/mockups/bg_mockup-horizontal.webp');
+
+    @media (min-width: $bp-phone-wide) {
+      right: 105px;
+
+      width: 350px;
+      height: 210px;
+
+      padding: 17px 32px 0;
+    }
+
+    @media (min-width: $bp-tablet) {
+      right: 164px;
+
+      width: 502px;
+      height: 304px;
+      padding: 24px 46px 0;
+    }
+
+    @media (min-width: $bp-desktop) {
+      bottom: 16px;
+    }
+  }
+
+  &_vertical {
+    position: relative;
+    z-index: 1;
+
+    width: 170px;
+    height: 210px;
+    padding: 22px 12px 0;
+
+    background-image: url('../../images/mockups/bg_mockup-vertical.webp');
+
+    @media (min-width: $bp-phone-wide) {
+      width: 255px;
+      height: 315px;
+
+      padding: 34px 17px 0;
+    }
+
+    @media (min-width: $bp-tablet) {
+      // top: 16px;
+
+      width: 350px;
+      height: 436px;
+      padding: 46px 24px 0;
+    }
+
+    @media (min-width: $bp-desktop) {
+      top: 0;
+    }
+  }
+}

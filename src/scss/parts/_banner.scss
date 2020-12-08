@@ -1,0 +1,131 @@
+.banner {
+  background-color: #8a8a8a;
+  background-image: url('../../images/banner/banner_bg_50.jpg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: cover;
+
+  @include mq($bp-tablet) {
+    background-image: url('../../images/banner/banner_bg_75.jpg');
+  }
+
+  @include mq($bp-tablet) {
+    background-image: url('../../images/banner/banner_bg_100.jpg');
+  }
+  // .banner__wrap
+  &__wrap {
+    height: 100vh;
+    padding-top: 28.5vh;
+
+    @include mq($bp-phone-wide) {
+      width: 55%;
+    }
+  }
+  // .banner__text
+  &__text {
+    padding-left: 10.5vw;
+
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: -1.3px;
+
+    @include mq($bp-tablet) {
+      font-size: 18px;
+    }
+
+    @include mq($bp-desktop) {
+      font-size: 20px;
+    }
+  }
+  // .banner__title
+  &__title {
+    margin-bottom: 17px;
+
+    line-height: 0.8;
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    @include mq($bp-tablet) {
+      font-size: 48px;
+    }
+
+    @include mq($bp-desktop) {
+      font-size: 62px;
+    }
+  }
+  // .banner__slogan
+  &__slogan {
+    margin: 0 16px 34px 5px;
+    padding: 0.4em 0.5em;
+
+    font-size: 16px;
+    color: #dbdbdb;
+    text-transform: uppercase;
+    letter-spacing: -0.25px;
+    word-spacing: 1.4px;
+
+    background-color: #333333;
+    border-radius: 0.3em;
+
+    @include mq($bp-tablet) {
+      font-size: 17px;
+    }
+
+    @include mq($bp-desktop) {
+      font-size: 18px;
+    }
+
+    &::first-letter {
+      color: #00a99d;
+    }
+    // .banner__slogan_marked
+    &_marked {
+      font-weight: 800;
+      text-transform: capitalize;
+    }
+  }
+  // .banner__link
+  &__link {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 30px auto;
+
+    font-size: 0;
+    text-align: center;
+
+    &::before {
+      content: '\3b';
+
+      display: inline;
+      margin-left: -35px;
+      padding: 0.2em 0.3em;
+
+      line-height: 1;
+
+      font-size: 64px;
+
+      font-family: $font-family-icons;
+      color: #00a99d;
+
+      border: 3px solid transparent;
+
+      border-radius: 5px;
+
+      transition: color 1s, background-color 1s;
+    }
+
+    &:focus::before {
+      border-color: #00a99d;
+    }
+
+    &:hover::before {
+      color: #e4e4e4;
+
+      background-color: #00a99d;
+    }
+  }
+}

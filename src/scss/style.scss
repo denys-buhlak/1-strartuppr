@@ -1,0 +1,27 @@
+@import '_mixins/__mixins';
+@import '_utils/__utils';
+@import '_utils/animations';
+
+// /* partials */
+@import 'parts/basic';
+@import 'parts/slider';
+@import 'parts/banner';
+@import 'parts/header';
+@import 'parts/offers';
+@import 'parts/features';
+@import 'parts/characteristics';
+@import 'parts/skills';
+@import 'parts/works';
+@import 'parts/facts';
+@import 'parts/contacts';
+@import 'parts/members';
+@import 'parts/quotes';
+@import 'parts/sponsors';
+@import 'parts/plans';
+@import 'parts/slogan';
+@import 'parts/footer';
+
+// /* test */
+@import 'parts/icons';
+// @import 'parts/slider';
+@import 'parts/js';

@@ -1,0 +1,93 @@
+.slogan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 44px 15px 50px;
+
+  background-color: #8a8a8a;
+
+  @include mq($bp-tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: calc(50% - 370px);
+    padding-left: calc(50% - 370px);
+  }
+
+  @include mq($bp-desktop) {
+    padding-right: calc(50% - 585px);
+    padding-left: calc(50% - 585px);
+  }
+
+  &__text {
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: capitalize;
+
+    &_big {
+      text-transform: uppercase;
+    }
+
+    &_color {
+      font-size: 0;
+
+      &::before {
+        content: '';
+
+        width: 10px;
+        height: 10px;
+        margin: 0.2em;
+
+        font-size: 22px;
+        font-family: $font-family-icons;
+
+        color: #00a99d;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    align-self: center;
+    margin: 1.7em 0 1.2em auto;
+    padding: 0.8em 3.3em 0.7em 1em;
+
+    font-weight: 800;
+    font-size: 13px;
+
+    color: #e4e4e4;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #00a99d;
+    border: 3px solid transparent;
+    border-radius: 5px;
+
+    transition: color 1s, background-color 3s, border-color 1s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      right: 7.5%;
+
+      display: inline-block;
+
+      height: 100%;
+
+      font-size: 16px;
+      font-family: $font-family-icons;
+
+      // color: #e4e4e4;
+    }
+
+    &:hover,
+    &focus {
+      color: #00a99d;
+
+      background-color: #f9f9f9;
+      border-color: #00a99d;
+    }
+  }
+}

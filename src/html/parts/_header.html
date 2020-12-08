@@ -1,0 +1,51 @@
+<!--  NAVIGATION BAR-->
+<header class="header" id="header">
+  <div class="navbar">
+    <!-- logo -->
+    <a href="./" class="navbar__logo">
+      <picture>
+        <source
+          srcset="../../images/header/logo_2.webp"
+          type="image/webp"
+          width="160"
+          height="40"
+          alt="startuppr logotype"
+          loading="lazy"
+        />
+        <img
+          class="img"
+          srcset="../../images/header/logo_2.png"
+          alt="startuppr logotype"
+          loading="lazy"
+          width="160"
+          height="40"
+        />
+      </picture>
+    </a>
+    <!-- /.logo -->
+    <!-- menu -->
+    <nav class="navbar__menu menu">
+      <a href="#home" class="menu__link">home</a>
+      <a href="#works" class="menu__link">portfolio</a>
+      <a href="#characteristics" class="menu__link">blog</a>
+      <a href="#team-members" class="menu__link">pages</a>
+      <a href="#features" class="menu__link">features</a>
+      <a href="#plans" class="menu__link">mega-menu</a>
+      <a href="#footer" class="menu__link">contact</a>
+    </nav>
+    <!-- ./menu -->
+
+    <!-- search -->
+    <form action="" method="get" class="navbar__form search">
+      <input placeholder="Искать здесь..." type="search" class="search__input" aria-label="Search" />
+      <button type="reset" class="navbar__button i_close search__button">закрыть</button>
+      <button type="submit" class="navbar__button i_search search__button">поиск</button>
+    </form>
+    <!-- ./search -->
+
+    <button class="navbar__button i_menu" data-js="toggleMenu" role="button">toogle menu</button>
+    <button class="navbar__button i_search" data-js="toggleSearch" role="button">show form</button>
+  </div>
+  <!-- ./wrap -->
+</header>
+<!--  /.NAVIGATION BAR -->

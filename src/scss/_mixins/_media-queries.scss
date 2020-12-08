@@ -1,0 +1,35 @@
+// необходимо добавить в файл scss\_utils\_variables.scss
+// список брекпоинтов, например такие:
+// $bp-phone:            400px;
+// $bp-phone-wide:       480px;
+// $bp-phablet:          560px;
+// $bp-tablet-small:     640px;
+// $bp-tablet:           768px;
+// $bp-tablet-wide:      1024px;
+// $bp-desktop:          1248px;
+// $bp-desktop-wide:     1440px;
+
+// EXAMPLE
+
+// @include mq($bp-tablet-wide) {padding-top: 4rem; font-size: 2.4rem;}
+// @include mq($bp-tablet-wide, max) {padding-top: 4rem; font-size: 2.4rem;}
+
+// @include mq($bp-phone) {font-size: 15px; color: red;}
+// @include mq($bp-phone,  max) {font-size: 15px; color: red;}
+
+// @include mq(750px) {font-size: 15px; color: red;}
+// @include mq(750px,  max) {font-size: 15px; color: red;}
+
+@mixin mq($breakpoint, $type:min) {
+  @if $type == max {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+  @else if $type == min {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

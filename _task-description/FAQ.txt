@@ -1,0 +1,26 @@
+1. Как правильно шрифты подключать?
+    google
+    font-face
+
+2. Навигация по сайту?
+    div>a
+    nav>a
+    ul>li>a
+    nav>ul>li>a
+    div>ul>li>a
+
+3. Что такое БОЛЬШАЯ вложенность тегов?
+    например,
+  <section>
+    <div class="container">
+      <div class="items">
+        <div class="item">
+          <h2></h2>
+          <p></p>
+          <div class="img-wrap">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

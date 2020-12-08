@@ -1,0 +1,10 @@
+// clearfix
+@mixin clearfix {
+  content: '';
+
+  display: block;
+  clear: both;
+}
+
+// EXAMPLE
+// @include clearfix;
