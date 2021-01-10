@@ -38,18 +38,19 @@
 
     transition: background-color 1s, color 1s;
 
-    &:hover {
-      color: #e4e4e4;
-
-      background-color: #00a99d;
-    }
-
     &_prev {
       left: 7.5%;
     }
 
     &_next {
       right: 7.5%;
+    }
+
+    &:hover,
+    &:focus {
+      color: #e4e4e4;
+
+      background-color: #00a99d;
     }
   }
 }

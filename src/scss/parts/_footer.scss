@@ -113,12 +113,6 @@
 
     transition: background-color 1s, border-color 0.5s, transform 1s;
 
-    &:hover {
-      background-color: #00a99d;
-      border-color: #00a99d;
-      transform: scale(1.5);
-    }
-
     &::before {
       content: '\e099';
 
@@ -127,10 +121,19 @@
       font-size: 16px;
       font-family: $font-family-icons;
     }
+
+    &:hover,
+    &:focus {
+      background-color: #00a99d;
+      border-color: #00a99d;
+      transform: scale(1.5);
+    }
   }
 }
 /* GOOGLE MAP */
 // need API-KEY???
-.gm-inset {
+.ltr,
+.gm-inset-map,
+.gm-inset-hover-enabled {
   display: none;
 }

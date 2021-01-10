@@ -17,6 +17,8 @@
     height: 100vh;
     padding-top: 28.5vh;
 
+    text-align: center;
+
     @include mq($bp-phone-wide) {
       width: 55%;
     }
@@ -27,6 +29,7 @@
 
     font-weight: 500;
     font-size: 16px;
+    text-align: justify;
     text-transform: uppercase;
     letter-spacing: -1.3px;
 
@@ -45,6 +48,7 @@
     line-height: 0.8;
     font-weight: 800;
     font-size: 24px;
+    text-align: justify;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 
@@ -62,6 +66,7 @@
     padding: 0.4em 0.5em;
 
     font-size: 16px;
+    text-align: justify;
     color: #dbdbdb;
     text-transform: uppercase;
     letter-spacing: -0.25px;
@@ -89,43 +94,45 @@
   }
   // .banner__link
   &__link {
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 30px auto;
+    display: inline-block;
+
+    margin: 14px 20px 0 0;
+    padding: 0 20px 0 20px;
 
     font-size: 0;
     text-align: center;
 
+    border: 3px solid transparent;
+
+    border-radius: 5px;
+
+    transition: background-color 1s;
+
+    &:focus {
+      border-color: #00a99d;
+    }
+
+    &:hover {
+      background-color: #00a99d;
+    }
+
     &::before {
       content: '\3b';
 
-      display: inline;
-      margin-left: -35px;
-      padding: 0.2em 0.3em;
-
-      line-height: 1;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
 
       font-size: 64px;
 
       font-family: $font-family-icons;
       color: #00a99d;
 
-      border: 3px solid transparent;
-
-      border-radius: 5px;
-
-      transition: color 1s, background-color 1s;
-    }
-
-    &:focus::before {
-      border-color: #00a99d;
+      transition: color 1s;
     }
 
     &:hover::before {
       color: #e4e4e4;
-
-      background-color: #00a99d;
     }
   }
 }

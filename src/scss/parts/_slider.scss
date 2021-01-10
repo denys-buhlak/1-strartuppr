@@ -61,15 +61,6 @@
 
     transition: background-color 1s;
 
-    &:hover {
-      background-color: #00a99d;
-    }
-
-    &:focus {
-      outline: 1px solid red;
-      outline-offset: 2px;
-    }
-
     &::before {
       content: '';
 
@@ -94,6 +85,11 @@
       &::before {
         content: '\45';
       }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #00a99d;
     }
   }
 

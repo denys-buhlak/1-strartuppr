@@ -7,7 +7,7 @@
   padding: 0;
 
   border: none;
-  // outline: none;
+  outline: none;
 }
 
 html,
@@ -35,6 +35,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 section,
